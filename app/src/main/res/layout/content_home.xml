@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.aashish.HomeActivity"
+    tools:showIn="@layout/app_bar_home">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/date"
+        android:textSize="30dp"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        />
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:id="@+id/tl"
+        android:layout_below="@+id/date"
+        >
+        <TableRow>
+
+            <TextView
+                android:layout_width="190dp"
+                android:gravity="right"
+                android:padding="5dip"
+                android:text="TEMPRATURE:"
+                android:textSize="15dp" />
+            <TextView
+                android:text=""
+                android:id="@+id/temp"
+                android:gravity="left"
+                android:padding="5dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="PPM:"
+                android:textSize="15dp"
+                android:padding="5dip"
+                android:gravity="right"
+                />
+            <TextView
+                android:text=""
+                android:id="@+id/ppm"
+                android:gravity="left"
+                android:padding="5dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="HUMIDITY:"
+                android:textSize="15dp"
+                android:padding="5dip"
+                android:gravity="right"/>
+            <TextView
+                android:text=""
+                android:id="@+id/humi"
+                android:gravity="left"
+                android:padding="5dip" />
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tl"
+        android:text="Refresh"
+        android:id="@+id/refresh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape"
+        android:textColor="#FFF"
+        />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/b1"
+        android:layout_below="@+id/refresh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="View Full Data"
+        android:background="@drawable/shape"
+        android:textColor="#FFF"
+        />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/map"
+        android:layout_below="@+id/b1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Get Safe Path"
+        android:background="@drawable/shape"
+        android:textColor="#FFF"
+        />
+
+
+
+</RelativeLayout>
